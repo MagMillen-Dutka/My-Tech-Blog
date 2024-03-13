@@ -1,36 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class='row'>
+  <div class='col-auto'>
+    <h2>Welcome, {{userName}}!</h2>
+  </div>
+</div>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Ghibli">
-  <title>Dashboard | Tech Blog</title>
-  <link href="/images/favicon.ico" rel="shortcut icon">
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-</head>
+<div class='row mt-4'>
+  <div class='col-md-6'>
+    <h3>Create a New Blog Post:</h3>
 
-<body class="flex-column min-100-vh">
-  <nav class="navbar">
-    <ul class="flex-row">
-      <li class="li-inline nav-item"><a href="/">Home</a></li>
-      <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
-      <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a></li>
-    </ul>
-  </nav>
-  <header class="hero">
-    <h1 class="app-title"><a href="/dashboard">Your Dashboard</a></h1>
-  </header>
+    <form class='form new-post-form'>
+      <div class='form-group'>
+        <label for='blog-name'>Title:</label>
+        <input class='form-input' type='text' id='post-name' name='post-name' />
+      </div>
+      <div class='form-group'>
+        <label for='blog-desc'>Content:</label>
+        <textarea class='form-input' id='post-desc' name='post-desc'></textarea>
+      </div>
+      <div class='form-group'>
+        <button type='submit' class='btn btn-primary'>Create</button>
+      </div>
+    </form>
+  </div>
 
-  <main class="col-auto">
-    {{{body}}}
-  </main>
+  {{#if posts.length}}
+    <div class='col-md-6 post-list'>
+      <h3>Check out your posts here!:</h3>
 
-  <footer class="footer flex-row justify-center">
-    <a href="/dashboard/new">➕ New Post</a>
-  </footer>
-</body>
+      {{#each posts as |post|}}
+        <div class='row mb-2'>
+          <div class='col-md-8'>
+            <h4><a
+                class='post-link'
+                id='created-blogs'
+                href='/posts/{{post.id}}'
+              >{{post.title}}</a></h4>
+          </div>
+          <div class='col-md-4'>
+            <a
+              class='post-link'
+              href='/dashboard/editPost/{{post.id}}'
+              class='edit-link'
+            >Edit post</a>
+            <button
+              class='btn btn-sm btn-danger'
+              data-id='{{post.id}}'
+            >DELETE</button>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+</div>
 
-</html>
-<script src="/js/logout.js"></script>
+<script src='/js/dashboard.js'></script>
+<script src='/js/editPost.js'></script>
