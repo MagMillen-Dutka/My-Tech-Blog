@@ -5,20 +5,23 @@
 
 body {
   font-family: 'fira Sans', sans-serif;
-  background-color: #d0cfd3;
+  background-color: #9470ffb7;
 }
 .post-link {
   text-decoration: none;
   color: black;
 }
 .post-link:hover {
-  color: #a14629;
+  color: #c9907d;
 }
 
 .display-1 {
-  font-weight: 200;
-  letter-spacing: 2rem;
-  color: #a14629;
+  font-weight: 250;
+  font-size: 50px;
+  letter-spacing: 1rem;
+  color: #ffb700;
+  margin:auto;
+  
 }
 #blog-post {
   border-style: solid;
@@ -50,7 +53,7 @@ body {
 }
 
 .navbar {
-  background-color: #382f24;
+  background-color: #4b2900;
 }
 hr {
   margin-inline-start: 70px;
@@ -61,14 +64,14 @@ hr {
   text-align: center;
   display: inline-block;
   padding: 0.5rem 1.2rem;
-  margin: 10px;
+  /* margin: 10px; */
   text-decoration: none;
   font-size: 1rem;
   border-radius: 0.3rem;
   border: 1px solid transparent;
   outline: none;
   color: #dad9d9;
-  background-color: #a14629;
+  background-color: #d63b07;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
