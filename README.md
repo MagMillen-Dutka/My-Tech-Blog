@@ -8,7 +8,7 @@ This project is a CMS-style blog site similar to a Wordpress site, where develop
 * [Technologies](#Technologies)
 * [Screenshot](#Screenshot)
 * [Credits](#Credits)
-* [Deployed Application]()
+* [Deployed Application](https://main--creative-churros-b3ec6a.netlify.app/)
 * [Repo](https://github.com/MagMillen-Dutka/My-Tech-Blog)
 
 ## User Story
