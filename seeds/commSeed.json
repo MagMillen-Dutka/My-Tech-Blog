@@ -1,12 +1,12 @@
 [
-    {
-      "commentBody": "wow so amazing!",
-      "userId": 1,
-      "postId": 2
-    },
-    {
-      "commentBody": "such a great idea!",
-      "userId": 2,
-      "postId": 1
-    }
-  ]
+  {
+    "commentBody": "wow so amazing!",
+    "userId": 1,
+    "postId": 2
+  },
+  {
+    "commentBody": "such a great idea!",
+    "userId": 2,
+    "postId": 1
+  }
+]

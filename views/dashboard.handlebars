@@ -1,0 +1,57 @@
+<div class='row'>
+  <div class='col-auto'>
+    <h2>Welcome, {{userName}}!</h2>
+  </div>
+</div>
+
+<div class='row mt-4'>
+  <div class='col-md-6'>
+    <h3>Create a New Blog Post:</h3>
+
+    <form class='form new-post-form'>
+      <div class='form-group'>
+        <label for='blog-name'>Title:</label>
+        <input class='form-input' type='text' id='post-name' name='post-name' />
+      </div>
+      <div class='form-group'>
+        <label for='blog-desc'>Content:</label>
+        <textarea class='form-input' id='post-desc' name='post-desc'></textarea>
+      </div>
+      <div class='form-group'>
+        <button type='submit' class='btn btn-primary'>Create</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if posts.length}}
+    <div class='col-md-6 post-list'>
+      <h3>Check out your posts here!:</h3>
+
+      {{#each posts as |post|}}
+        <div class='row mb-2'>
+          <div class='col-md-8'>
+            <h4><a
+                class='post-link'
+                id='created-blogs'
+                href='/posts/{{post.id}}'
+              > >{{post.title}}</a></h4>
+          </div>
+          <div class='col-md-4'>
+            <a
+              class='post-link'
+              href='/dashboard/editPost/{{post.id}}'
+              class='edit-link'
+            >Edit post</a>
+            <button
+              class='btn btn-sm btn-danger'
+              data-id='{{post.id}}'
+            >DELETE</button>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+</div>
+
+<script src='/js/dashboard.js'></script>
+<script src='/js/editPost.js'></script>
