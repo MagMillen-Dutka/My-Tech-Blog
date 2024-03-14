@@ -12,7 +12,7 @@ body {
   color: black;
 }
 .post-link:hover {
-  color: #c9907d;
+  color: #363636;
 }
 
 .display-1 {
@@ -71,7 +71,7 @@ hr {
   border: 1px solid transparent;
   outline: none;
   color: #dad9d9;
-  background-color: #d63b07;
+  background-color: #4b2900;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
