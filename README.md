@@ -2,13 +2,14 @@
 
 This project is a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. This app follows the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication. Application allows creation of user acounts and a secure login. A logged in used can create new posts/blog entries and leave comments under a post. A user profile page has visibility of all created posts and allows them to be deleted.
 
-[User Story](#User-Story)
-[Installation](#installation)
-[Usage](#usage)
-[Technologies](#Technologies)
-[Screenshot](#Screenshot)
-[Credits](#Credits)
-[Deployed Application]()
+* [User Story](#User-Story)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Technologies](#Technologies)
+* [Screenshot](#Screenshot)
+* [Credits](#Credits)
+* [Deployed Application]()
+* [Repo](https://github.com/MagMillen-Dutka/My-Tech-Blog)
 
 ## User Story
 
